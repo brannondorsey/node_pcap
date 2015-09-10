@@ -8,7 +8,8 @@
       ],
       "link_settings": {
           "libraries": [
-              "-rpath ./lib/<!(node -e \"console.log(require('os').hostname() === 'linux' ? 'linux' : 'osx')\")/libpcap.dylib"
+              "-L ../lib/<!(node -e \"console.log(require('os').hostname() === 'linux' ? 'linux' : 'osx')\")",
+              "-lpcap"
           ]
       }
     }
