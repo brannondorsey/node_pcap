@@ -8,7 +8,7 @@
       ],
       "link_settings": {
           "libraries": [
-              "-lpcap"
+              "-rpath ./lib/<!(node -e \"console.log(require('os').hostname() === 'linux' ? 'linux' : 'osx')\")/libpcap.a"
           ]
       }
     }
